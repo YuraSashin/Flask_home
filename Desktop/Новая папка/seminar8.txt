@@ -9,7 +9,7 @@ read -p "Path: " Test1
 if [ -e $Test1 ]
     then
         echo 'Sucsess'
-        cd $DELDIR
+        cd $Test1
         echo 'Remove'
         rm -v *.bak *.tmp *.backup
         echo 'Remove sucsess'
