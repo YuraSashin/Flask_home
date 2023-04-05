@@ -1,0 +1,56 @@
+yura@yura-VirtualBox:~$ mkdir Test1
+yura@yura-VirtualBox:~$ cat > test
+yura@yura-VirtualBox:~$ nano test
+
+#!/bin/bash
+
+read -p "Path: " Test1
+
+if [ -e $Test1 ]
+    then
+        echo 'Sucsess'
+        cd $DELDIR
+        echo 'Remove'
+        rm -v *.bak *.tmp *.backup
+        echo 'Remove sucsess'
+    else
+        echo 'Error'
+        exit 2
+fi
+
+yura@yura-VirtualBox:~$ bash test
+Sucsess
+yura@yura-VirtualBox:~$ sudo rm -rf Test1
+yura@yura-VirtualBox:~$ bash test
+Error
+yura@yura-VirtualBox:~$ echo $?
+2
+Задание 1
+
+yura@yura-VirtualBox:~$ cat > ownersort.sh
+yura@yura-VirtualBox:~$ nano ownersort.sh
+
+#!/bin/bash
+
+dir=$(ls -l | tr -s ' ' '\t' | cut -f '3' | sort -u)
+for i in $dir; do
+	mkdir -p $i
+done
+#Смотрим владельцев, убираю повторения, добавляю папки для каждого
+dirfile=$(ls -l | tr -s ' ' '\t' | cut -f '3 9')
+count=0
+for i in $dirfile; do
+ 	count=$((count+1))
+		if (($count%2))
+			then
+				dir=$i
+				echo $dir = $i zero
+			else
+				if [ -f ./$i ]
+					then
+					cp ./$i ./$dir/$i
+				fi
+		fi
+done
+# Цикл нечётное владелец, четное файл, проверяю файл или папка, если файл - копирую
+Задание 2
