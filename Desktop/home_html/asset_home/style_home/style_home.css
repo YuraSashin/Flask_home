@@ -1,0 +1,103 @@
+@font-face{
+    font-family: "Gilroy-Semibold";
+    src: url("../fonts_home/gilroy-semibold.ttf");
+    font-style: normal;
+    font-weight: 400;
+}
+    
+@font-face{
+    font-family: "Gilroy-Bold";
+    src: url("../fonts_home/gilroy-bold.ttf");
+    font-style: normal;
+    font-weight: 400;
+}
+    
+@font-face{
+    font-family: "Gilroy-Medium";
+    src: url("../fonts_home/gilroy-medium.ttf");
+    font-style: normal;
+    font-weight: 400;
+}
+    
+@font-face{
+    font-family: "Gilroy-Regular";
+    src: url("../fonts_home/gilroy-regular.ttf");
+    font-style: normal;
+    font-weight: 400;
+}
+
+html{
+    font-family: 'Open Sans' sans-serif;
+}
+body{
+    margin: 0;
+}
+.header{
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+.header-item{
+    color: #000;
+    text-decoration: none;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.header-item_new{
+    color: #000;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-right: 500px;
+}
+.intro{
+    display: flex;
+    /* gap: 128px; */
+    justify-content: space-between;
+    width: 1146px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.intro_title{
+    color: #000;
+    font-family: Gilroy-Bold;
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.intro_text{
+    color: #888;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.intro_button{
+    color: #FFF;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    width: 140px;
+    height: 50px;
+    flex-shrink: 0;
+    border-radius: 50px;
+    background: #F25822;
+    box-shadow: 4px 4px 8px 0px rgba(242, 88, 34, 0.20);
+}
+.intro_log{
+    display: flex;
+    justify-content: space-between;
+    width: 1200px;
+    flex-shrink: 0;
+    gap: 97px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 150px;
+}
