@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <th>Имя</th> <th>Фамилия</th> <th>Возраст</th>
+        {% for person in context %}
+        <tr>
+        <td>{{ person.name }}</td>
+        <td>{{ person.last_name }}</td>
+        <td>{{ person.age }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
