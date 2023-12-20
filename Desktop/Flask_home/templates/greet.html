@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Задание семинар 2
+{% endblock title %}
+
+{% block navbar %}
+<div class="d-flex">
+    {% if username %}
+    <a href="{{ url_for('logout') }}" class="btn btn-danger">Выйти</a>
+    {% else %}
+    <a href="{{ url_for('index') }}" class="btn btn-success">Далее</a>
+    {% endif %}
+</div>
+{% endblock navbar %}
+
+{% block content %}
+<div class="alert alert-success m-3" role="alert">
+    Здравствуй, {% if username %}{{ username }}{% else %}Гость{% endif %}!
+</div>
+{% endblock content %}
